@@ -18,7 +18,7 @@ print("OFDM SIMULATION CODE")
 def ofdm_noise_plot(Bandwidth=1000, fnoiseMax=0.3, NoOfCarriers=11):
     iMin = -(NoOfCarriers - 1)/2
     iMax = (NoOfCarriers-1)/2
-    f = np.linspace(-Bandwidth, Bandwidth, NoOfCarriers*5000)
+    f = np.linspace(-Bandwidth/2, Bandwidth/2, 4096)
 
     fig1 = plt.figure(figsize = (100,5))
     plt.ylim((-0.5, 1.5))
@@ -135,4 +135,4 @@ def ofdm_symbol_boundary(Bandwidth=1000, NoOfCarriers=64, GuardSize=7, CPSize=16
 
 #ofdm_symbol_boundary(1000, 64, 7, 16)
 #ofdm_symbol(1000, 64, 7, 16)
-ofdm_noise_plot(1000, 0.25, 11)
+ofdm_noise_plot(239*15000, 0.25, 239)
